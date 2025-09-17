@@ -1,0 +1,33 @@
+{
+  "name": "bracey",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "csslint": "^1.0.5",
+    "domhandler": "^5.0.3",
+    "domutils": "^3.1.0",
+    "htmlhint": "^1.1.4",
+    "htmlparser2": "^8.0.2",
+    "mime": "^3.0.0",
+    "postcss": "^8.4.38",
+    "websocket": "^1.0.35"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0"
+  },
+  "scripts": {
+    "start": "node launch.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turbio/bracey.vim.git"
+  },
+  "author": "mason clayton",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/turbio/bracey.vim/issues"
+  },
+  "homepage": "https://github.com/turbio/bracey.vim#readme"
+}
