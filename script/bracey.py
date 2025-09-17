@@ -1,6 +1,7 @@
 import subprocess
 import vim
 import sys
+import os
 
 python_version = int(sys.version[0])
 
@@ -49,6 +50,9 @@ def startServer():
 
     log_path = vim.eval('g:bracey_server_log')
     if log_path is not None:
+        log_dir = os.path.dirname(log_path)
+        if not os.path.exists(log_dir):
+            os.makedirs(log_dir)
         log_to = open(log_path, 'a')
 
     try:

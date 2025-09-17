@@ -35,8 +35,6 @@ function! bracey#startBrowser(url)
 		if has("unix")
 			if system("uname -s") =~ "Darwin"
 				call system('open '.a:url.' &')
-			elseif system("uname -o") =~ "Android"
-				call system('termux-open '.a:url)
 			else
 				call system('xdg-open '.a:url.' &')
 			endif

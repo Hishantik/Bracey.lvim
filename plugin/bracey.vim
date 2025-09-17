@@ -4,11 +4,11 @@
 "License:     Released under the GPL V2 license
 
 if !exists("g:bracey_server_log")
-	let g:bracey_server_log = "/data/data/com.termux/files/usr/tmp/bracey_server_logfile"
+	let g:bracey_server_log = expand('~/.bracey_server_logfile')
 endif
 
 if !exists("g:bracey_server_path")
-	let g:bracey_server_path = "http://0.0.0.0"
+	let g:bracey_server_path = "http://127.0.0.1"
 endif
 
 if !exists("g:bracey_server_port")
@@ -18,7 +18,7 @@ if !exists("g:bracey_server_port")
 endif
 
 if !exists("g:bracey_server_allow_remote_connections")
-	let g:bracey_server_allow_remote_connections = 1
+	let g:bracey_server_allow_remote_connections = 0
 endif
 
 if !exists("g:bracey_auto_start_server")
