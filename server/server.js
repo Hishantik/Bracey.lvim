@@ -233,8 +233,12 @@ Server.prototype.handleFileRequest = function(request, response){
 		response.end(file.webSrc());
 
 	}else{
-		//console.log('loading from ' + this.files.editorRoot + url);
-		fs.readFile(this.files.editorRoot + url, function(err, data){
+		var path = this.files.editorRoot + url;
+		if (url.startsWith(this.files.editorRoot)) {
+			path = url;
+		}
+		//console.log('loading from ' + path);
+		fs.readFile(path, function(err, data){
 			if(err){
 				response.writeHead(404);
 				response.end(self.files.errorPage.webSrc(
